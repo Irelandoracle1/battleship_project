@@ -12,5 +12,14 @@ class MyBattleship:
         """
         for b in range(10):
             self.board.append(["0"]*10)
+        self.display_board()
+
+    def display_board(self):
+        """
+        This method displays the game board
+        with the values in the board list
+        """
+        for row in self.board:
+            print(" ".join(row))
 
 battleship_game=MyBattleship()
