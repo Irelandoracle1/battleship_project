@@ -1,3 +1,4 @@
+import random
 class MyBattleship:
     """
     This class holds all the code for the battleship game
@@ -24,5 +25,10 @@ class MyBattleship:
         for row in self.board:
             print(v, " ".join(row))
             v+=1
+    def random_row(self):
+        return random.randint(0, 10-1)
+
 
 battleship_game=MyBattleship()
+rand_row=battleship_game.random_row()
+print(rand_row)
