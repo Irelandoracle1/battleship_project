@@ -27,6 +27,8 @@ class MyBattleship:
             v+=1
     def random_row(self):
         return random.randint(0, 10-1)
+    def random_column(self):
+        return random.randint(0, 10-1)
 
 
 battleship_game=MyBattleship()
