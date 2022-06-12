@@ -51,7 +51,7 @@ class MyBattleship:
             guess_column=int(input("Guess_Column:"))
             if guess_row==random_r and guess_column==random_c:
                 print("Congrats! You hit the ship.\n")
-                print("You Won!")
+                print("You Won! Begin new game")
                 break;
             else:
                 if (guess_row<0 or guess_row>9) or (guess_column<0 or guess_column>9):
