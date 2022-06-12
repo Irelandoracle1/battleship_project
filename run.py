@@ -53,9 +53,18 @@ class MyBattleship:
             else:
                 if (guess_row<0 or guess_row>9) or (guess_column<0 or guess_column>9):
                     print("Sorry your guess was out of range")
+                elif(self.board[guess_row][guess_column]=="X"):
+                    print("You have already guessed that before")
+                else:
+                    print("Sorry. You missed your hit")
+                    self.board[guess_row][guess_column]=="X"
+                    print(play+1)
+                    self.display_board()
+
+
 
     
 
-
+print("Welcome to the Battleship Game")
 battleship_game=MyBattleship()
 
