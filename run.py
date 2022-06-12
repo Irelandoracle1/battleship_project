@@ -30,13 +30,13 @@ class MyBattleship:
         """
         Generate random value for the board row
         """
-        return random.randint(0, 10-1)
+        return random.randint(0, 2)
 
     def random_column(self):
         """
         Generate random value for the game column
         """
-        return random.randint(0, 10-1)
+        return random.randint(0, 2)
 
     def play_game(self):
         """
@@ -44,9 +44,12 @@ class MyBattleship:
         the battleship game
         """
         for play in range(10):
+            
+            random_r=self.random_row()
+            random_c=self.random_column()
             guess_row=int(input("Guess_Row:"))
             guess_column=int(input("Guess_Column:"))
-            if guess_row==self.random_row() and guess_column==random_column:
+            if guess_row==random_r and guess_column==random_c:
                 print("Congrats! You hit the ship.\n")
                 print("You Won!")
                 break;
